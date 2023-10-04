@@ -2,13 +2,13 @@ import random
 
 
 def RPS():
-    options = ["ROCK", "PAPER", "SCISSORS"]
+    options = ["rock", "paper", "scissors"]
 
     while True:
         input_choice = input(
-            "Enter rock, paper, or scissors (or 'Q' to quit): "
-        ).upper()
-        if input_choice == "Q":
+            "Enter rock, paper, or scissors (or 'q' to quit): "
+        ).lower()
+        if input_choice == "q":
             print("Thanks for playing!")
             break
         elif input_choice not in options:
@@ -21,9 +21,9 @@ def RPS():
         if input_choice == comp_choice:
             print("It's a tie!")
         elif (
-            (input_choice == "ROCK" and comp_choice == "SCISSORS")
-            or (input_choice == "PAPER" and comp_choice == "ROCK")
-            or (input_choice == "SCISSORS" and comp_choice == "PAPER")
+            (input_choice == "rock" and comp_choice == "scissors")
+            or (input_choice == "paper" and comp_choice == "rock")
+            or (input_choice == "scissors" and comp_choice == "paper")
         ):
             print("You win!")
         else:
